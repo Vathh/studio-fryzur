@@ -1,11 +1,11 @@
 @import './colors';
 
-.ciasto{
-    position: relative; 
-}
-
 .services{
   position: relative;
+  
+  &__mainbox{
+      position: relative;      
+  }
   
   &__sidemenu{
       position: fixed;
@@ -79,8 +79,23 @@
               transform: translateX(-50%) rotate(45deg);
           }
 
+          &::before{
+            position: absolute;
+            content: '';
+            right: 0;
+            top: 0;
+            height: 0;
+            width: 2px;
+            background-color: $gold;
+            transition: height .3s;
+          }
+
           &:last-of-type::after{
               display: none;
+          }
+
+          &:hover::before{
+            height: 100%;
           }
       }
 
@@ -93,7 +108,7 @@
         height: 100%;
         background-color: $black;
         display: flex;
-        border-right: 1px solid $gold;
+        // border-right: 1px solid $gold;
       }
 
   }
