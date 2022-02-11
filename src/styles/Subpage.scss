@@ -1,0 +1,150 @@
+@import './colors';
+
+.page{
+  position: relative;
+  &__header{
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      color: $gold;
+      
+      &-shadow{
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+      }
+      
+      &-top{
+          position: relative;
+          text-align: center;
+          text-transform: uppercase;
+          padding: 20px 0;
+          font-size: 3rem;
+          z-index: 1;
+          text-shadow: 1px 1px black;
+      }
+      
+      &-text{
+          position: relative;
+          text-align: center;
+          padding-bottom: 30px;
+          z-index: 1;
+          font-size: 2rem;
+          text-shadow: 1px 1px black;
+      }
+  }
+
+  &__content{
+      &-item{
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          padding-bottom: 30px;
+          padding-top: 20px;
+
+          &:first-of-type{
+              padding-top: 0;
+          }
+
+          &:last-of-type{
+              &::after{
+                  display: none;
+              }
+
+              &::before{
+                  display: none;
+              }
+          }
+
+          &::after{
+              content: '';
+              width: 100%;
+              height: 1px;
+              position: absolute;
+              bottom: 0;
+              background-color: $gold;
+          }
+
+          &::before{
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              width: 30px;
+              height: 30px;
+              background-color: $gold;
+              transform: translate(-50%, 50%) rotate(45deg);
+          }
+      }
+
+      &-description{
+
+          &-header{
+              text-align: center;
+              padding: 20px 15px;
+              font-size: 1.8rem;
+              color: $gold;
+          }
+
+          &-text{
+              padding: 0 15px;
+              font-size: 1.5rem;
+          }
+      }
+
+      &-img{
+          position: relative;
+          width: 100%;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          flex-wrap: wrap;
+      }
+  }
+
+  &__card{
+      position: relative;
+      margin: 10px;
+      height: 350px;
+      width: 250px;
+      text-align: center;
+      background-position: center;
+      background-size: cover;
+      border-radius: 15px;
+      overflow: hidden;
+      margin-top: 30px;
+
+      &-btn{
+          position: absolute;
+          top: 0px;
+          right: 5px;
+          padding: 5px;
+          background: none;
+          border: none;
+          color: #fff;
+          font-size: 2.4rem;
+          text-shadow: 2px 2px 5px rgba(0,0,0,.5);
+          cursor: crosshair;
+          z-index: 10;
+      }
+      
+      &-reverse{
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          background-position: center;
+          background-size: cover;
+          clip-path: circle(0 at 50% 90%);
+          transition: clip-path .8s;                       
+      }    
+  }
+
+  .page__card-btn:hover~.page__card-reverse{
+      clip-path: circle(120% at 50% 90%);
+  }
+}

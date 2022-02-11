@@ -1,0 +1,139 @@
+@import './colors';
+
+.start{
+  width: 100%;
+
+  &__photo{
+      position: relative;
+      height: 500px;
+      background-image: url('https://www.sprzet-fryzjerski.pl/blog/wp-content/uploads/2017/06/jak-wybrac-dobrego-fryzjera.jpg');        
+      background-size: cover;
+      background-position: center;
+
+      &-shadow{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0,0,0,.5);
+      }
+
+  }    
+  &__box1{
+      position: relative;
+      top: 60px;
+      text-align: center;
+
+      h1{
+          font-size: 2.2rem;
+          margin: 0 10px;            
+      }
+      
+      p{
+          font-size: 1.8rem;
+      }
+  }
+
+  &__seeoffer{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.9rem;
+      z-index: 1;
+      text-align: center;
+
+      .glass{
+          position: relative;
+          margin: 10px;
+          padding: 10px 25px;
+          background: none;
+          border: 1px solid $gold;
+          border-radius: 8px;            
+          text-transform: uppercase;
+          cursor: pointer;
+          overflow: hidden;
+          a{
+              font-size: 1.7rem;
+              font-weight: 600;
+              color: $gold;
+              text-decoration: none;
+          }
+      }
+
+      .glass::before{
+          display: block;
+          position: absolute;
+          content:'';
+          transition: .5s;
+          z-index: -1;
+          top: -30px;
+          left: -130px;
+          height: 200%;
+          width: 100px;
+          background-image: linear-gradient(-90deg,rgba(255,255,255,.3), rgba(255,255,255,0));
+          transform: rotate(20deg);
+      }
+      
+      .glass:hover::before{
+          left: 130%;
+      }
+  }
+
+  &__text{
+      width: 100%;
+      position: absolute;
+      bottom: 100px;
+      text-align: center;
+  }
+
+  .fas{
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.8rem;
+      color: #fff;
+
+      animation: bounce-top 2s ease-in both;
+  }
+}
+
+@media only screen and (min-width: 1200px){
+  .start{    
+    &__photo{
+        height: 600px;     
+    }    
+    &__box1{
+        top: 70px;
+
+        h1{
+            font-size: 2.4rem;         
+        }
+        
+        p{
+            font-size: 2rem;
+        }
+    }
+
+    &__seeoffer{
+        font-size: 2.1rem;
+
+        .glass{
+            margin: 15px;
+            padding: 15px 30px;
+            a{
+                font-size: 1.9rem;
+            }
+        }
+    }
+
+    &__text{
+        font-size: 2rem;
+    }
+
+    .fas{
+        bottom: 40px;
+        font-size: 2.6rem;
+    }
+}
+}

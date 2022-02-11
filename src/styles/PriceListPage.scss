@@ -1,0 +1,215 @@
+@import './colors';
+
+.pricelist{
+  position: relative;
+
+  &__header{
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      color: $gold;
+
+      &-shadow{
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background-color: rgba(0,0,0,.55);
+      }
+
+      &-text{
+          position: relative;
+          text-align: center;
+          text-transform: uppercase;
+          padding: 70px 0;
+          font-size: 4rem;
+          z-index: 1;
+          text-shadow: 1px 1px black;
+      }
+  }
+
+  &__cards{
+      display: flex;
+      flex-direction: column;
+
+      &-card{
+          width: 100%;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          cursor: pointer;
+          text-align: center;
+          
+          &-header{
+              text-transform: uppercase;
+              border: 1px solid #25292D;
+              padding: 20px 0;
+              font-size: 1.8rem;
+              color: $gold;
+          }
+
+          &-list{
+              position: relative;
+              display: none;
+
+              &-item{
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  font-size: 1.4rem;
+                  line-height: 1.7;
+
+                  p{
+                      padding: 10px 15px;
+
+                      &:nth-of-type(1){
+                          text-align: start;
+                      }
+
+                      &:nth-of-type(2){
+                          text-align: end;
+                      }
+
+                  }
+
+                  &:nth-of-type(odd){
+                      background-color: #25292D;
+                  }
+
+                  &:nth-of-type(even){
+                      background-color: #1B1E22;
+                  }
+              }                
+          }
+      }
+  }
+
+  &__text{
+      text-align: center;
+      padding: 20px 0;
+      border: 1px solid #25292D;
+
+      &-content{
+          font-size: 1.4rem;
+          padding: 10px 30px;
+      }
+
+  }
+}
+
+.list-active{
+  display: block;
+}
+
+
+@media only screen and (min-width: 768px)  {
+  .pricelist{
+  
+      &__header{        
+          &-text{
+              padding: 70px 0;
+              font-size: 4.4rem;
+          }
+      }
+  
+      &__cards{    
+          &-card{                
+              &-header{
+                  padding: 20px 0;
+                  font-size: 2rem;
+              }
+  
+              &-list{    
+                  &-item{
+                      font-size: 1.7rem;
+  
+                      p{
+                          padding: 10px 20px;
+                      }
+                  }                
+              }
+          }
+      }
+  
+      &__text{
+          padding: 20px 0;
+  
+          &-content{
+              font-size: 1.5rem;
+              padding: 10px 40px;
+          }
+  
+      }
+  }
+}
+
+@media only screen and (min-width: 992px)  {
+  .pricelist{    
+      &__cards{    
+          &-card{                
+              &-header{
+                  padding: 25px 0;
+                  font-size: 2.2rem;
+                  letter-spacing: .2rem;
+              }
+  
+              &-list{    
+                  &-item{
+                      font-size: 1.8rem;
+  
+                      p{
+                          padding: 10px 25px;
+                      }
+                  }                
+              }
+          }
+      }
+  
+      &__text{
+          padding: 20px 0;
+  
+          &-content{
+              font-size: 1.6rem;
+          }
+  
+      }
+  }
+}
+
+@media only screen and (min-width: 1200px)  {
+  .pricelist{
+  
+      &__header{        
+          &-text{
+              font-size: 4.6rem;
+          }
+      }
+          
+      &__cards{    
+          &-card{                
+              &-header{
+                  padding: 30px 0;
+                  font-size: 2.4rem;
+              }
+  
+              &-list{    
+                  &-item{
+                      font-size: 1.9rem;
+  
+                      p{
+                          padding: 10px 30px;
+                      }
+                  }                
+              }
+          }
+      }
+  
+      &__text{
+          padding: 20px 0;
+  
+          &-content{
+              font-size: 1.7rem;
+          }
+  
+      }
+  }
+}
