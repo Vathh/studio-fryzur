@@ -39,11 +39,12 @@
       &-item{
           position: relative;
           display: flex;
-          justify-content: center;
+          justify-content: space-around;
           align-items: center;
-          flex-direction: column;
+          flex-direction: row;
           padding-bottom: 30px;
           padding-top: 20px;
+          flex-wrap: wrap;
 
           &:first-of-type{
               padding-top: 0;
@@ -139,21 +140,19 @@
           left: 0;
           background-position: center;
           background-size: cover;
-          clip-path: circle(0 at 50% 90%);
+        //   clip-path: circle(0 at 50% 90%);
           transition: clip-path .8s;                       
       }    
   }
 
-  .page__card-btn:hover~.page__card-reverse{
-      clip-path: circle(120% at 50% 90%);
-  }
+//   .page__card-btn:hover~.page__card-reverse{
+//       clip-path: circle(120% at 50% 90%);
+//   }
 }
 
 @media only screen and (min-width: 600px){
     .page{  
         &__content{
-          //   border-left: 1px solid $gold;
-          //   border-right: 1px solid $gold;
             margin-left: 150px;
         }
     }
