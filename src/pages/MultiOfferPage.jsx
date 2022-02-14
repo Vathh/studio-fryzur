@@ -5,26 +5,26 @@ import PageContentItem from '../bigComponents/PageContentItem';
 import ServicesSideMenu from '../bigComponents/ServicesSideMenu'
 import ServicesDesktopSideMenu from '../bigComponents/ServicesDesktopSideMenu';
 
-import '../styles/Subpage.scss';
+import '../styles/MultiServicePage.scss';
 
 import useWindowWidth from '../hooks/useWindowWidth'
 
-const MultiOfferPage = ({contentDescriptionsData, headerImg, header, text}) => {
+const MultiOfferPage = ({contentDescriptionsData, headerImg, header, text, styles}) => {
 
   const contentItemsToShow = contentDescriptionsData.map(item => {
-    return <PageContentItem key={item.header} header={item.header} text={item.text} imgs={item.imgs}/>
+    return <PageContentItem key={item.header} header={item.header} text={item.text} imgs={item.imgs} styles={styles}/>
   })
 
   const { width } = useWindowWidth();
 
   return ( 
     <div className="wrapper">
-      <div className="page">
+      <div className={styles.page}>
         <SubpageHeader img={headerImg} header={header} text={text}/>                
         <ServicesSideMenu />
         <div className="services__mainbox">
           {(width > 600) && <ServicesDesktopSideMenu />}  
-          <div className="page__content">
+          <div className={styles.content}>
             {contentItemsToShow}
           </div>
         </div>

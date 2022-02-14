@@ -1,10 +1,10 @@
 import React from 'react';
 
-const PageContentDescription = ({header, text}) => {
+const PageContentDescription = ({header, text, styles}) => {
   return ( 
-    <div className="page__content-description">
-      <h3 className="page__content-description-header">{header}</h3> 
-      <p className="page__content-description-text">{text}</p>
+    <div className={styles.description}>
+      <h3 className={styles.descriptionHeader}>{header}</h3> 
+      <p className={styles.descriptionText}>{text}</p>
     </div>
    );
 }

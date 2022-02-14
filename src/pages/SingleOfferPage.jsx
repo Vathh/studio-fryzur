@@ -10,14 +10,14 @@ import '../styles/Subpage.scss';
 
 import useWindowWidth from '../hooks/useWindowWidth'
 
-const SingleOfferPage = ({contentDescriptionsData, headerImg, header, text, imgs}) => {
+const SingleOfferPage = ({contentDescriptionsData, headerImg, header, text, imgs, styles}) => {
 
   const contentDescriptionsToShow = contentDescriptionsData.map(item => {
-    return <PageContentDescription key={item.text} header={item.header} text={item.text}/>
+    return <PageContentDescription key={item.text} header={item.header} text={item.text} styles={styles}/>
   })
 
   const contentImgsToShow = imgs.map(img => {
-    return <PageContentImgCard key={img.id} beforeImg={img.beforeImg} afterImg={img.afterImg}/>
+    return <PageContentImgCard key={img.id} beforeImg={img.beforeImg} afterImg={img.afterImg} styles={styles}/>
   })
 
   const { width } = useWindowWidth();
@@ -29,8 +29,8 @@ const SingleOfferPage = ({contentDescriptionsData, headerImg, header, text, imgs
         <ServicesSideMenu />
         <div className="services__mainbox">
           {(width > 600) && <ServicesDesktopSideMenu />}  
-          <div className="page__content"> 
-            <div className="page__content-item">
+          <div className={styles.content}> 
+            <div className={styles.item}>
               {contentDescriptionsToShow}
               {contentImgsToShow}
             </div>                                 

@@ -26,12 +26,48 @@ import keratinAfter3 from '../img/keratin-after3.jpg'
 import tochange1 from '../img/tochange1.jpg';
 import tochange2 from '../img/tochange2.jpg';
 
+const multiOfferPagesStyles = {
+  page: 'multipage',
+  content: 'multiPage__content',
+  item: 'multiPage__content-item',
+  img: 'multiPage__content-img',
+  card: 'multiPage__card',
+  cardBtn: 'multiPage__card-btn',
+  cardReverse: 'multiPage__card-reverse',
+  description: 'multiPage__content-description',
+  descriptionHeader: 'multiPage__content-description-header',
+  descriptionText: 'multiPage__content-description-text'
+}
+
+const singleOfferPagesStyles = {
+  content: 'page__content',
+  item: 'page__content-item',
+  img: 'page__content-img',
+  card: 'page__card',
+  cardBtn: 'page__card-btn',
+  cardReverse: 'page__card-reverse',
+  description: 'page__content-description',
+  descriptionHeader: 'page__content-description-header',
+  descriptionText: 'page__content-description-text'
+}
+
 const multiOfferPagesData = [
   {
     path: '/services/care',
     headerImg: careHeader,
     header: 'Zabiegi pielęgnacyjne',
     text: 'SPA dla Twoich włosów',
+    styles: {
+      content: 'multiPage__content',
+      item: 'multiPage__content-item',
+      img: 'multiPage__content-img',
+      card: 'multiPage__card',
+      cardBtn: 'multiPage__card-btn',
+      cardReverse: 'multiPage__card-reverse',
+      description: 'multiPage__content-description',
+      descriptionHeader: 'multiPage__content-description-header',
+      descriptionText: 'multiPage__content-description-text'
+    },
     contentDescriptionsData : [
       {
         header: 'Nawilżanie arganowe',
@@ -495,6 +531,7 @@ const Page = () => {
         headerImg={page.headerImg}
         header={page.header}
         text={page.text}
+        styles={multiOfferPagesStyles}
       />} 
     />
   })
@@ -509,6 +546,7 @@ const Page = () => {
         header={page.header}
         text={page.text}
         imgs={page.imgs}
+        styles={singleOfferPagesStyles}
       />}
     />
   })
