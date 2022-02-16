@@ -56,47 +56,47 @@
       }
 
       &-item{
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          text-align: center;
-          padding: 20% 0;
-          list-style: none;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        list-style: none;
 
-          a{
-            text-decoration: none;
-            color: $white;
-          }
+        a{
+        text-decoration: none;
+        color: $white;
+        padding: 20% 10px;
+        }
 
-          &::after{
-              content: '';
-              background-color: $gold;
-              width: 10px;
-              height: 10px;
-              position: absolute;
-              bottom: -7px;
-              left: 50%;
-              transform: translateX(-50%) rotate(45deg);
-          }
-
-          &::before{
-            position: absolute;
+        &::after{
             content: '';
-            right: 0;
-            top: 0;
-            height: 0;
-            width: 2px;
             background-color: $gold;
-            transition: height .3s;
-          }
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            bottom: -7px;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+        }          
 
-          &:last-of-type::after{
-              display: none;
-          }
+        &::before{
+        position: absolute;
+        content: '';
+        right: 0;
+        top: 0;
+        height: 0;
+        width: 1px;
+        background-color: $gold;
+        transition: height .3s;
+        }
 
-          &:hover::before{
-            height: 100%;
-          }
+        &:last-of-type::after{
+            display: none;
+        }
+
+        &:hover::before{
+        height: 100%;
+        }
       }
 
       &-desktop{
@@ -206,6 +206,12 @@
 
 .sidemenu-active{
   transform: translateX(0);
+}
+
+.sidemenu__item-active{
+    &::before{
+        height: 100%;
+    }
 }
 
 @media only screen and (min-width: 600px){

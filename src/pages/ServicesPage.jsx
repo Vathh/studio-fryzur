@@ -22,9 +22,8 @@ const ServicesPage = () => {
       <div className="services">
         <div className="wrapper">
           <SubpageHeader img={servicesHeader} header={'oferta'} text={'Poznaj nasze usługi!'}/>
-          <ServicesSideMenu />
           <div className="services__mainbox">
-            {(width > 600) && <ServicesDesktopSideMenu />}
+            {(width > 600) ? <ServicesDesktopSideMenu /> : <ServicesSideMenu /> }
             <ServicesContent />
           </div>
         </div>

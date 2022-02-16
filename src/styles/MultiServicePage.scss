@@ -166,3 +166,91 @@
         }
     }
   }
+
+  @media only screen and (max-width: 1100px){
+    .multiPage{              
+        &__content{
+            &-item{
+                display: flex;
+                justify-content: space-around;
+                flex-direction: column;
+                flex-wrap: nowrap;
+      
+                &:first-of-type{
+                    padding-top: 20px;
+                }       
+                
+                &:nth-of-type(even){
+                    flex-direction: column;
+                }
+            }
+      
+            &-description{
+                width: 80%;
+                justify-self: normal;
+                margin: 30px auto 0;
+      
+                &-header{
+                    text-align: center;
+                    padding: 20px 15px;
+                    font-size: 1.8rem;
+                    color: $gold;
+                }
+      
+                &-text{
+                    padding: 0 15px;
+                    font-size: 1.5rem;
+                }
+            }
+      
+            &-img{
+                width: 100%;
+                justify-content: space-around;
+                flex-wrap: nowrap;
+            }
+        }
+      
+        &__card{
+            position: relative;
+            margin: 10px;
+            height: 350px;
+            width: 250px;
+            text-align: center;
+            background-position: center;
+            background-size: cover;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-top: 30px;
+      
+            &-btn{
+                position: absolute;
+                top: 0px;
+                right: 5px;
+                padding: 5px;
+                background: none;
+                border: none;
+                color: #fff;
+                font-size: 2.4rem;
+                text-shadow: 2px 2px 5px rgba(0,0,0,.5);
+                cursor: pointer;
+                z-index: 10;
+            }
+            
+            &-reverse{
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                background-position: center;
+                background-size: cover;
+              //   clip-path: circle(0 at 50% 90%);
+                transition: clip-path .8s;                       
+            }    
+        }
+      
+      //   .page__card-btn:hover~.page__card-reverse{
+      //       clip-path: circle(120% at 50% 90%);
+      //   }
+      }
+  }

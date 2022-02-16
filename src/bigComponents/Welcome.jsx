@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import '../styles/Welcome.scss';
 
 const Welcome = () => {
@@ -13,11 +15,11 @@ const Welcome = () => {
             <p className="start__header-text">w Twoim mieście!</p>
           </div>   
           
-          <p className="start__seeoffer">Sprawdź naszą <br/> <button className="glass"><a href="services.html">ofertę</a></button></p>
+          <p className="start__seeoffer">Sprawdź naszą <br/> <button className="glass"><Link to="/services">ofertę</Link></button></p>
           
           <p className="start__text">To tu pasja i kunszt zawodowy tworzą nowy wymiar fryzjerstwa.</p> 
           
-          <a href="#aboutusForLargeNav"><i className="fas fa-chevron-down"></i></a>
+          <a href="#aboutusN"><i className="fas fa-chevron-down"></i></a>
         </div>
       </div>
     </section>
