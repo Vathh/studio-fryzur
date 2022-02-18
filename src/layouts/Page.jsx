@@ -6,6 +6,7 @@ import PriceListPage from '../pages/PriceListPage';
 import ServicesPage from '../pages/ServicesPage';
 import MultiOfferPage from '../pages/MultiOfferPage';
 import SingleOfferPage from '../pages/SingleOfferPage';
+import LoginPage from '../pages/LoginPage';
 
 import careHeader from '../img/care-header.jpg'
 import colouringHeader from '../img/colouring-header.jpg'
@@ -560,6 +561,7 @@ const Page = () => {
       <Route path="/pricelist" element={<PriceListPage/>} />
       {multiOfferPagesToShow}
       {singleOfferPagesToShow}
+      <Route path="/login" element={<LoginPage/>} />
     </Routes>    
    );
 }
