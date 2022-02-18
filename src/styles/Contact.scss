@@ -13,7 +13,7 @@
   &__city{
       position: relative;
       width: 100%;
-      padding-bottom: 20px;
+      padding-bottom: 10px;
       display: flex;
       justify-content: center;
       padding-top: 10px;
@@ -21,7 +21,7 @@
       &-name{
           position: relative;
           color: $orange;
-          font-size: 2.7rem; 
+          font-size: 2.2rem; 
       }
   }
 
@@ -42,8 +42,8 @@
       
       
       &-item{
-          height: 140px;
-          width: 140px;
+          height: 130px;
+          width: 160px;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -53,18 +53,20 @@
           margin: 0 20px 20px;
 
           .fas{
-              font-size: 3.5rem;
-              margin-bottom: 5px;
+              font-size: 3rem;
+              margin-bottom: 10px;
               color: $orange;
           }
 
           &-title{
-              margin-bottom: 5px;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
           }
           
           &-text{
-              text-align: center;
-              font-size: 1.5rem;
+            text-align: center;
+            font-size: 1.4rem;
+            line-height: 1.5;
           }
 
           &-phone{
@@ -73,13 +75,61 @@
               text-decoration: none;     
               color: $white;     
               z-index: 10;  
+              line-height: 1.2; 
           }
+        
+        .wide{
+            width: 210px;
+        }
       }
 
       .wide{
-          width: 320px;
+          width: 290px;
       }
   }
+}
+
+@media only screen and (min-width: 600px){
+    .contact{    
+        &__city{
+            padding-bottom: 20px;    
+            &-name{
+                font-size: 2.4rem; 
+            }
+        }
+    
+        &__box{           
+            
+            &-item{
+                height: 150px;
+                width: 180px;
+                display: flex;
+    
+                .fas{
+                    font-size: 3rem;
+                    margin-bottom: 10px;
+                }
+    
+                &-title{
+                    font-size: 1.6rem;
+                    margin-bottom: 10px;
+                }
+                
+                &-text{
+                    font-size: 1.4rem;
+                    line-height: 1.5;
+                }
+    
+                &-phone{
+                    line-height: 1.2; 
+                }
+            }
+    
+            .wide{
+                width: 360px;
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 1200px){
@@ -120,49 +170,6 @@
     
             .wide{
                 width: 420px;
-            }
-        }
-    }
-}
-
-@media only screen and (min-width: 300px){
-    .contact{    
-        &__city{
-            padding-bottom: 10px;    
-            &-name{
-                font-size: 1.9rem; 
-            }
-        }
-    
-        &__box{           
-            
-            &-item{
-                height: 150px;
-                width: 180px;
-                display: flex;
-    
-                .fas{
-                    font-size: 3rem;
-                    margin-bottom: 10px;
-                }
-    
-                &-title{
-                    font-size: 1.6rem;
-                    margin-bottom: 10px;
-                }
-                
-                &-text{
-                    font-size: 1.4rem;
-                    line-height: 1.5;
-                }
-    
-                &-phone{
-                    line-height: 1.2; 
-                }
-            }
-    
-            .wide{
-                width: 210px;
             }
         }
     }

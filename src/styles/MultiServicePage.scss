@@ -87,9 +87,8 @@
 
       &-description{
           position: relative;
-          width: 35%;
+          width: 100%;
           justify-self: flex-start;
-          margin-top: 30px;
 
           &-header{
               text-align: center;
@@ -100,18 +99,18 @@
 
           &-text{
               padding: 0 15px;
-              font-size: 1.5rem;
+              font-size: 1.4rem;
           }
       }
 
       &-img{
           position: relative;
-          width: 60%;
+          width: 100%;
           display: flex;
-          justify-content: space-between;
           align-items: center;
           flex-wrap: wrap;
-          align-self: center;
+          justify-content: space-around;
+        //   align-self: center;
       }
   }
 
@@ -149,108 +148,57 @@
           left: 0;
           background-position: center;
           background-size: cover;
-        //   clip-path: circle(0 at 50% 90%);
           transition: clip-path .8s;                       
       }    
   }
-
-//   .page__card-btn:hover~.page__card-reverse{
-//       clip-path: circle(120% at 50% 90%);
-//   }
 }
 
 @media only screen and (min-width: 600px){
     .multiPage{  
         &__content{
             margin-left: 150px;
+      
+            &-description{      
+                &-header{
+                    font-size: 1.9rem;
+                }
+      
+                &-text{
+                    font-size: 1.5rem;
+                }
+            }      
         }
     }
   }
 
-  @media only screen and (max-width: 1100px){
+  @media only screen and (min-width: 1100px){
     .multiPage{              
         &__content{
-            &-item{
-                display: flex;
-                justify-content: space-around;
-                flex-direction: column;
-                flex-wrap: nowrap;
-      
-                &:first-of-type{
-                    padding-top: 20px;
-                }       
-                
+            &-item{         
                 &:nth-of-type(even){
-                    flex-direction: column;
+                    flex-direction: row-reverse;
                 }
             }
       
             &-description{
-                width: 80%;
-                justify-self: normal;
+                width: 35%;
                 margin: 30px auto 0;
       
                 &-header{
                     text-align: center;
-                    padding: 20px 15px;
-                    font-size: 1.8rem;
-                    color: $gold;
+                    padding: 25px 15px;
+                    font-size: 2rem;
                 }
       
                 &-text{
-                    padding: 0 15px;
-                    font-size: 1.5rem;
+                    font-size: 1.6rem;
                 }
             }
       
             &-img{
-                width: 100%;
+                width: 60%;
                 justify-content: space-around;
-                flex-wrap: nowrap;
             }
         }
-      
-        &__card{
-            position: relative;
-            margin: 10px;
-            height: 350px;
-            width: 250px;
-            text-align: center;
-            background-position: center;
-            background-size: cover;
-            border-radius: 15px;
-            overflow: hidden;
-            margin-top: 30px;
-      
-            &-btn{
-                position: absolute;
-                top: 0px;
-                right: 5px;
-                padding: 5px;
-                background: none;
-                border: none;
-                color: #fff;
-                font-size: 2.4rem;
-                text-shadow: 2px 2px 5px rgba(0,0,0,.5);
-                cursor: pointer;
-                z-index: 10;
-            }
-            
-            &-reverse{
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                right: 0;
-                left: 0;
-                background-position: center;
-                background-size: cover;
-              //   clip-path: circle(0 at 50% 90%);
-                transition: clip-path .8s;                       
-            }    
-        }
-      
-      //   .page__card-btn:hover~.page__card-reverse{
-      //       clip-path: circle(120% at 50% 90%);
-      //   }
       }
   }

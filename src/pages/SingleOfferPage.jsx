@@ -27,7 +27,7 @@ const SingleOfferPage = ({contentDescriptionsData, headerImg, header, text, imgs
       <div className="page">
         <SubpageHeader img={headerImg} header={header} text={text}/>                
         <div className="services__mainbox">
-        {(width > 600) ? <ServicesDesktopSideMenu /> : <ServicesSideMenu /> } 
+        {(width > 599) ? <ServicesDesktopSideMenu /> : <ServicesSideMenu /> } 
           <div className={styles.content}> 
             <div className={styles.item}>
               {contentDescriptionsToShow}

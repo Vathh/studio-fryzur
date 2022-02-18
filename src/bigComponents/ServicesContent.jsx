@@ -15,7 +15,7 @@ const servicesContentBoxesData = [
   {
     img: servicesColouringImg,
     header: 'Koloryzacja',
-    text: 'Profesjonalne farbowanie dopasowane do Twoich potrzeb',
+    text: 'Profesjonalne farbowanie dopasowane do Twoich potrzeb i oczekiwań',
     toRef: '/services/colouring'
   },
   {

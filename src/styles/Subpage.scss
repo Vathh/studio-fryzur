@@ -86,14 +86,14 @@
           &-header{
               text-align: center;
               padding: 20px 15px;
-              font-size: 1.8rem;
+              font-size: 1.6rem;
               color: $gold;
           }
 
           &-text{
               padding: 0 15px;
-              font-size: 1.5rem;
-              width: 80%;
+              font-size: 1.4rem;
+              width: 85%;
               margin: 0 auto;
           }
       }
@@ -142,20 +142,49 @@
           left: 0;
           background-position: center;
           background-size: cover;
-        //   clip-path: circle(0 at 50% 90%);
           transition: clip-path .8s;                       
       }    
   }
-
-//   .page__card-btn:hover~.page__card-reverse{
-//       clip-path: circle(120% at 50% 90%);
-//   }
 }
+
+@media only screen and (min-width: 450px){
+    .page{  
+        &__content{
+            &-description{
+
+                &-header{
+                    font-size: 1.7rem;
+                }
+      
+                &-text{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+  }
 
 @media only screen and (min-width: 600px){
     .page{  
         &__content{
             margin-left: 150px;
+        }
+    }
+  }
+
+  @media only screen and (min-width: 1000px){
+    .page{  
+        &__content{
+            &-description{
+
+                &-header{
+                    font-size: 1.8rem;
+                }
+      
+                &-text{
+                    font-size: 1.6rem;
+                }
+            }
         }
     }
   }

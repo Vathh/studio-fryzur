@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import fryzlogo from '../img/fryzlogo.jpg'
 
 import '../styles/HomeHeader.scss';
@@ -9,7 +11,7 @@ const HomeHeader = () => {
     <header id="home" className="header">
       <div className="wrapper">
           <div className="header__box1">
-              <a href="index.html"><img src={fryzlogo} alt="Logo firmy - Studio fryzur. Urszula Kotowska." className="header__box1-logo"/></a>
+              <Link to="/"><img src={fryzlogo} alt="Logo firmy - Studio fryzur. Urszula Kotowska." className="header__box1-logo"/></Link>
           </div>        
           <div className="header__box2">
               <div className="header__box2-city">

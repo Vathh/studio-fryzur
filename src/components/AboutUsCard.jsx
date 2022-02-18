@@ -1,7 +1,5 @@
 import React from 'react';
 
-import '../styles/AboutUsCard.scss';
-
 const AboutUsCard = ({number, title, text, photo}) => {
 
   const classe = `aboutus__card card-${number}`;

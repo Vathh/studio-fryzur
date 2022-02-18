@@ -22,7 +22,7 @@ const MultiOfferPage = ({contentDescriptionsData, headerImg, header, text, style
       <div className={styles.page}>
         <SubpageHeader img={headerImg} header={header} text={text}/>                
         <div className="services__mainbox">
-        {(width > 600) ? <ServicesDesktopSideMenu /> : <ServicesSideMenu /> }
+        {(width > 599) ? <ServicesDesktopSideMenu /> : <ServicesSideMenu /> }
           <div className={styles.content}>
             {contentItemsToShow}
           </div>
