@@ -33,7 +33,7 @@ const LoginPage = () => {
         </div>
         <button className='loginPanel-btn'>Zaloguj się</button>
         <p className="loginPanel-text">Nie masz jeszcze konta?</p>
-        <Link to="/" className='loginPanel-registerBtn'>Zarejestruj się</Link>
+        <Link to="/register" className='loginPanel-registerBtn'>Zarejestruj się</Link>
       </div>
     </div>
    );

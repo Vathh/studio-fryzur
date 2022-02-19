@@ -26,6 +26,7 @@ import keratinAfter3 from '../img/keratin-after3.jpg'
 
 import tochange1 from '../img/tochange1.jpg';
 import tochange2 from '../img/tochange2.jpg';
+import RegisterPage from '../pages/RegisterPage';
 
 const multiOfferPagesStyles = {
   page: 'multipage',
@@ -562,6 +563,7 @@ const Page = () => {
       {multiOfferPagesToShow}
       {singleOfferPagesToShow}
       <Route path="/login" element={<LoginPage/>} />
+      <Route path="/register" element={<RegisterPage/>}/>
     </Routes>    
    );
 }
