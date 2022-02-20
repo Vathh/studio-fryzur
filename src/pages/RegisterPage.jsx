@@ -12,7 +12,7 @@ const RegisterPage = () => {
 
   const [login, setLogin] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
-  const [sex, setSex] = useState('');
+  // const [sex, setSex] = useState('');
   const [password, setPassword] = useState('');
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const [repeatPassword, setRepeatPassword] = useState('');
@@ -28,9 +28,9 @@ const RegisterPage = () => {
     setPhoneNumber(e.target.value);
   }
 
-  const handleSexSelect = (e) => {
-    setSex(e.target.value)
-  }
+  // const handleSexSelect = (e) => {
+  //   setSex(e.target.value)
+  // }
 
   const handlePasswordInput = (e) => {
     setPassword(e.target.value);
@@ -64,40 +64,41 @@ const RegisterPage = () => {
     <div className='wrapper'>
       <div className="registerPanel">
         <h3 className="registerPanel-header">Rejestracja użytkownika</h3>
-        <input type="text" placeholder='Login' className='registerPanel-input' value={login} onChange={handleLoginInput}/>
-        <input type="tel" placeholder='Numer telefonu' value={phoneNumber} onChange={handlePhoneNumberInput} className='registerPanel-input'/>
-        <select name="sex" defaultValue={0} onChange={handleSexSelect} className='registerPanel-sexSelect'>
+        <div className="registerPanel__inputContainer">
+          <input type="text" placeholder='Login' className='registerPanel-input' value={login} onChange={handleLoginInput}/>
+        </div>
+        <div className="registerPanel__inputContainer">
+          <input type="tel" placeholder='Numer telefonu' value={phoneNumber} onChange={handlePhoneNumberInput} className='registerPanel-input'/>
+        </div>
+        {/* <select name="sex" defaultValue={0} onChange={handleSexSelect} className='registerPanel-sexSelect'>
             <option value="0" disabled hidden>Płeć</option>
             <option value="1">Mężczyzna</option>
             <option value="2">Kobieta</option>
-        </select>
-        <div className="registerPanel__password">
-          <input type={isPasswordVisible ? 'text' : 'password'} placeholder='Hasło' className='registerPanel-input registerPanel-password' value={password} onChange={handlePasswordInput}/>
-          <button className="registerPanel__password-btn" onClick={handlePasswordVisibility}><i className="fas fa-eye"></i></button>
+        </select> */}
+
+        <div className="registerPanel__inputContainer">
+          <div className="registerPanel__password">
+            <input type={isPasswordVisible ? 'text' : 'password'} placeholder='Hasło' className='registerPanel-input registerPanel-password' value={password} onChange={handlePasswordInput}/>
+            <button className="registerPanel__password-btn" onClick={handlePasswordVisibility}><i className="fas fa-eye"></i></button>
+          </div>
+
           <div className="registerPanel__password-requirements">
-            <span className="registerPanel__password-requirements-item">{isPasswordLongEnough ? checkIcon : timesIcon}8-32 znaków</span>
-            <span className="registerPanel__password-requirements-item">{isMarkPassword ? checkIcon : timesIcon}liczba lub znak specjalny</span>            
+            <span className="registerPanel__password-requirements-item" style={isPasswordLongEnough ? {color: 'green'} : {color: 'red'}}>{isPasswordLongEnough ? checkIcon : timesIcon}8-32 znaków</span>
+            <span className="registerPanel__password-requirements-item" style={isMarkPassword ? {color: 'green'} : {color: 'red'}}>{isMarkPassword ? checkIcon : timesIcon}cyfra i znak specjalny</span>            
+          </div>
+        </div>    
+
+        <div className="registerPanel__inputContainer">
+          <div className="registerPanel__password">
+            <input type={isRepeatPasswordVisible ? 'text' : 'password'} placeholder='Powtórz hasło' className='registerPanel-input registerPanel-password' value={repeatPassword} onChange={handleRepeatPasswordInput}/>
+            <button className="registerPanel__password-btn" onClick={handleRepeatPasswordVisibility}><i className="fas fa-eye"></i></button>
           </div>
         </div>
 
-        <div className="registerPanel__password">
-          <input type={isRepeatPasswordVisible ? 'text' : 'password'} placeholder='Powtórz hasło' className='registerPanel-input registerPanel-password' value={repeatPassword} onChange={handleRepeatPasswordInput}/>
-          <button className="registerPanel__password-btn" onClick={handleRepeatPasswordVisibility}><i className="fas fa-eye"></i></button>
-        </div>
+        <button className="registerPanel-btn">Rejestracja</button>
 
         <p className="registerPanel-approval">Rejestrując się jednocześnie akceptujesz <Link to="/rules">Regulamin</Link></p>
       </div>
-      {/* <div className="loginPanel">
-        <h3 className='loginPanel-header'>Rejestracja</h3>
-        <input type="text" placeholder='Login' className='loginPanel-input' value={login} onChange={handleLoginInput}/>
-        <div className="loginPanel__password">
-          <input type={isPasswordVisible ? 'text' : 'password'} placeholder='Hasło' className='loginPanel-input loginPanel-password' value={password} onChange={handlePasswordInput}/>
-          <button className="loginPanel__password-btn" onClick={handlePasswordVisibility}><i className="fas fa-eye"></i></button>
-        </div>
-        <button className='loginPanel-btn'>Zaloguj się</button>
-        <p className="loginPanel-text">Nie masz jeszcze konta?</p>
-        <Link to="/register" className='loginPanel-registerBtn'>Zarejestruj się</Link>
-      </div> */}
     </div>
    );
 }
