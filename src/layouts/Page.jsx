@@ -6,7 +6,6 @@ import PriceListPage from '../pages/PriceListPage';
 import ServicesPage from '../pages/ServicesPage';
 import MultiOfferPage from '../pages/MultiOfferPage';
 import SingleOfferPage from '../pages/SingleOfferPage';
-import LoginPage from '../pages/LoginPage';
 
 import careHeader from '../img/care-header.jpg'
 import colouringHeader from '../img/colouring-header.jpg'
@@ -26,7 +25,6 @@ import keratinAfter3 from '../img/keratin-after3.jpg'
 
 import tochange1 from '../img/tochange1.jpg';
 import tochange2 from '../img/tochange2.jpg';
-import RegisterPage from '../pages/RegisterPage';
 
 const multiOfferPagesStyles = {
   page: 'multipage',
@@ -562,8 +560,6 @@ const Page = () => {
       <Route path="/pricelist" element={<PriceListPage/>} />
       {multiOfferPagesToShow}
       {singleOfferPagesToShow}
-      <Route path="/login" element={<LoginPage/>} />
-      <Route path="/register" element={<RegisterPage/>}/>
     </Routes>    
    );
 }
